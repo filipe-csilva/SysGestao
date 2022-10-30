@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SysGestao.Aplicacoes.Clientes;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,7 +12,7 @@ namespace SysGestao.Menus.Clientes
         public static void Show()
         {
             Console.Clear();
-            MenuLayout.Show();
+            Layout.Show();
 
             WhiteOptionscl1();
 
@@ -29,7 +30,7 @@ namespace SysGestao.Menus.Clientes
                     MenuClientes.Show();
                     break;
                 case 4:
-                    MenuClientes.Show();
+                    ListaClientes.Show();
                     break;
                 case 0:
                     MenuPrincipal.Show();

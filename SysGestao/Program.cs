@@ -1,4 +1,5 @@
-﻿using SysGestao.Menus;
+﻿using SysGestao.Aplicacoes.Clientes;
+using SysGestao.Menus;
 using SysGestao.Menus.Clientes;
 
 namespace SysGestao
@@ -7,7 +8,7 @@ namespace SysGestao
     {
         static void Main(string[] args)
         {
-            MenuPrincipal.Show();
+            ListaClientes.Show();
 
             Console.ReadKey();
         }

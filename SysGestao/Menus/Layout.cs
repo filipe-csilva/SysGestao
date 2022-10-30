@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SysGestao.Menus
 {
-    public static class MenuLayout
+    public static class Layout
     {
         public static void Show()
         {
