@@ -4,68 +4,76 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SysGestao.Menus
+namespace SysGestao.Menus.Clientes
 {
-    public static class MenuPrincipal
+    public static class MenuProdutos
     {
         public static void Show()
         {
             Console.Clear();
             MenuLayout.Show();
 
-            WhiteOptions();
+            WhiteOptionspr1();
 
             short option = short.Parse(Console.ReadLine());
 
             switch (option)
             {
                 case 1:
+                    MenuProdutos.Show();
                     break;
                 case 2:
+                    MenuProdutos.Show();
                     break;
                 case 3:
+                    MenuProdutos.Show();
                     break;
                 case 4:
+                    MenuProdutos.Show();
                     break;
                 case 0:
-                    Console.Clear();
-                    Environment.Exit(0);
+                    MenuPrincipal.Show();
                     break;
-                default: MenuPrincipal.Show();
+                default:
+                    MenuProdutos.Show();
                     break;
             }
         }
-        
-        public static void WhiteOptions()
+
+        public static void WhiteOptionspr1()
         {
-            Console.SetCursorPosition(5, 5);
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.SetCursorPosition(5, 4);
+            Console.Write("Menu Produtos");
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.SetCursorPosition(5, 6);
             Console.Write("Selecione uma das opções abaixo:");
-            Console.SetCursorPosition(5, 7);
+            Console.SetCursorPosition(5, 8);
             Console.ForegroundColor = ConsoleColor.Green;
             Console.Write("1");
             Console.ForegroundColor = ConsoleColor.White;
-            Console.Write(" - Clientes");
-            Console.SetCursorPosition(5, 8);
+            Console.Write(" - Cadastrar");
+            Console.SetCursorPosition(5, 9);
             Console.ForegroundColor = ConsoleColor.Green;
             Console.Write("2");
             Console.ForegroundColor = ConsoleColor.White;
-            Console.Write(" - Fornecedores");
-            Console.SetCursorPosition(5, 9);
+            Console.Write(" - Editar");
+            Console.SetCursorPosition(5, 10);
             Console.ForegroundColor = ConsoleColor.Green;
             Console.Write("3");
             Console.ForegroundColor = ConsoleColor.White;
-            Console.Write(" - Produtos");
-            Console.SetCursorPosition(5, 10);
+            Console.Write(" - Deletar");
+            Console.SetCursorPosition(5, 11);
             Console.ForegroundColor = ConsoleColor.Green;
             Console.Write("4");
             Console.ForegroundColor = ConsoleColor.White;
-            Console.Write(" - Úsuarios");
-            Console.SetCursorPosition(5, 12);
+            Console.Write(" - Consultar");
+            Console.SetCursorPosition(5, 13);
             Console.ForegroundColor = ConsoleColor.Green;
             Console.Write("0");
             Console.ForegroundColor = ConsoleColor.White;
-            Console.Write(" - Sair");
-            Console.SetCursorPosition(5, 15);
+            Console.Write(" - Retornar");
+            Console.SetCursorPosition(5, 16);
             Console.Write("Opção: ");
             Console.ForegroundColor = ConsoleColor.Red;
         }
