@@ -8,7 +8,7 @@ namespace SysGestao
     {
         static void Main(string[] args)
         {
-            ListaClientes.Show();
+            MenuPrincipal.Show();
 
             Console.ReadKey();
         }

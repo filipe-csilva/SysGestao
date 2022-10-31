@@ -12,4 +12,8 @@
     <Folder Include="Dados\Produtos\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Caelum.Stella.CSharp" Version="1.4.7" />
+  </ItemGroup>
+
 </Project>
