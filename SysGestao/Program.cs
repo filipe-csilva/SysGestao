@@ -8,7 +8,7 @@ namespace SysGestao
     {
         static void Main(string[] args)
         {
-            MenuPrincipal.Show();
+            CadClientes.CriarArquivo();
 
             Console.ReadKey();
         }

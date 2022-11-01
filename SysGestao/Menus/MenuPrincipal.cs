@@ -1,4 +1,5 @@
-﻿using SysGestao.Menus.Clientes;
+﻿using SysGestao.Aplicacoes.Clientes;
+using SysGestao.Menus.Clientes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,7 +26,7 @@ namespace SysGestao.Menus
                     Environment.Exit(0);
                     break;
                 case 1:
-                    MenuClientes.Show();
+                    CadClientes.Show();
                     break;
                 case 2:
                     MenuFornecedor.Show();

@@ -21,7 +21,7 @@ namespace SysGestao.Aplicacoes.Clientes
             Console.Write("LISTA DE CLIENTES\n\n");
             Console.ForegroundColor = ConsoleColor.White;
             Console.SetCursorPosition(0, 4);
-            LinhaMenu();
+            Layout.LinhaMenu();
             Console.SetCursorPosition(3, 5);
             Console.Write("CÓDIGO");
             Console.SetCursorPosition(11, 5);
@@ -41,7 +41,7 @@ namespace SysGestao.Aplicacoes.Clientes
             Console.SetCursorPosition(87, 5);
             Console.Write("OBSERVAÇÕES");
             Console.SetCursorPosition(0, 6);
-            LinhaMenu();
+            Layout.LinhaMenu();
 
             var endArquivo = "clientes.txt";
 
@@ -115,16 +115,6 @@ namespace SysGestao.Aplicacoes.Clientes
 
             var resultado = new DadosClientes(idParse, nome, cpf, telefone);
             return  resultado;
-        }
-
-        public static void LinhaMenu()
-        {
-            Console.Write("+");
-            for (int i = 0; i <= 100; i++)
-            {
-                Console.Write("-");
-            }
-            Console.WriteLine("+");
         }
 
         //Opção inicial
