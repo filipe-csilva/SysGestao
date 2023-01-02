@@ -1,6 +1,6 @@
-# Nome do meu projeto
+# SysGestão
 
-Rápida descrição do objetivo de fazer esse projeto
+Sistema de gerenciamento comercial
 
 | :placard: Vitrine.Dev |     |
 | -------------  | --- |
