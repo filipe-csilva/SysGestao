@@ -1,12 +1,6 @@
-﻿using SysGestao.Aplicacoes.Clientes;
-using SysGestao.Menus.Clientes;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using SysGestao.Menus.Clientes;
 
-namespace SysGestao.Menus
+namespace SysGestao
 {
     public static class MenuPrincipal
     {
@@ -26,7 +20,7 @@ namespace SysGestao.Menus
                     Environment.Exit(0);
                     break;
                 case 1:
-                    CadClientes.Show();
+                    MenuClientes.Show();
                     break;
                 case 2:
                     MenuFornecedor.Show();

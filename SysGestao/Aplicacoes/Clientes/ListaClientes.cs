@@ -1,13 +1,7 @@
-﻿using SysGestao.Menus;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using SysGestao.Dados.Clientes;
-using Caelum.Stella.CSharp.Format;
+﻿using Caelum.Stella.CSharp.Format;
+using SysGestao.Menus;
 
-namespace SysGestao.Aplicacoes.Clientes
+namespace SysGestao
 {
     public static class ListaClientes
     {

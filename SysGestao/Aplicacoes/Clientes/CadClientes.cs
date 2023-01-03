@@ -1,11 +1,8 @@
-﻿using SysGestao.Menus;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using Caelum.Stella.CSharp.Format;
+using SysGestao.Menus;
 using System.Text;
-using System.Threading.Tasks;
 
-namespace SysGestao.Aplicacoes.Clientes
+namespace SysGestao
 {
     public static class CadClientes
     {
@@ -37,11 +34,73 @@ namespace SysGestao.Aplicacoes.Clientes
         {
             var endArquivo = "usuarios.csv";
 
-            using (var fluxodearquivo = new FileStream(endArquivo, FileMode.Create))
-            using (var escritor = new StreamWriter(fluxodearquivo))
+            using (var fluxoDeArquivo = new FileStream(endArquivo, FileMode.Create))
+            using (var escritor = new StreamWriter(fluxoDeArquivo))
             {
                 escritor.WriteLine("2,HAILTON CAMELO,42384118641,083986335200");
             }
+        }
+
+        public static void TestaEscrita()
+        {
+            var endArquivo = "teste.txt";
+
+            using (var fluxoDeArquivo = new FileStream(endArquivo, FileMode.Create))
+            using (var escritor = new StreamWriter(fluxoDeArquivo))
+            {
+                for (int i = 1;i <= 1000000; i++)
+                {
+                    escritor.WriteLine($"Linha {i}");
+                    escritor.Flush();
+                    Console.WriteLine($"Linha {i} foi escrita com sucesso tecle enter...");
+                }
+            }
+        }
+
+        public static void CriarArquivo2()
+        {
+            var endArquivo = "testeEscrita.csv";
+
+            using (var fluxoDeArquivo = new FileStream(endArquivo, FileMode.Create))
+            using (var escritor = new StreamWriter(fluxoDeArquivo))
+            {
+                escritor.WriteLine(true);
+                escritor.WriteLine(false);
+                escritor.WriteLine(4545454545);
+            }
+            Console.WriteLine("Aplicação Finalizada...");
+        }
+
+        public static void CriarArquivo3()
+        {
+            var endArquivo = "testeEscrita.csv";
+
+            using (var fs = new FileStream(endArquivo, FileMode.Create))
+            using (var escritor = new BinaryWriter(fs))
+            {
+                escritor.Write(456);
+                escritor.Write(546544);
+                escritor.Write(4000.50);
+                escritor.Write("Gustavo Lima");
+            }
+            Console.WriteLine("Aplicação Finalizada...");
+        }
+
+        public static void LerArquivo3()
+        {
+            var endArquivo = "testeEscrita.csv";
+
+            using (var fs = new FileStream(endArquivo, FileMode.Open))
+            using (var leitor = new BinaryReader(fs))
+            {
+                var agencia = leitor.ReadInt32();
+                var numeroDaConta = leitor.ReadInt32();
+                var saldo = leitor.ReadDouble();
+                var titular = leitor.ReadString();
+
+                Console.WriteLine(agencia + "/" + numeroDaConta);
+            }
+            Console.WriteLine("Aplicação Finalizada...");
         }
     }
 }
