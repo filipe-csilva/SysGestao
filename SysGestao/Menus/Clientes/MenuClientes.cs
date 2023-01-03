@@ -14,7 +14,7 @@
             switch (option)
             {
                 case 1:
-                    MenuClientes.Show();
+                    CadClientes.Show();
                     break;
                 case 2:
                     MenuClientes.Show();

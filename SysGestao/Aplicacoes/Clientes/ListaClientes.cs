@@ -99,7 +99,7 @@ namespace SysGestao
 
         static DadosClientes ConverteStringPCliente(string linha)
         {
-            var campos = linha.Split(",");
+            var campos = linha.Split(";");
             var id = campos[0];
             var nome = campos[1];
             var cpf = new CPFFormatter().Format(campos[2]);
