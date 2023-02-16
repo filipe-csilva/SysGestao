@@ -2,16 +2,18 @@
 
 Sistema de gerenciamento comercial
 
-| :placard: Vitrine.Dev |     |
+| :placard: Vitrine.Dev | Desenvolvimento |
 | -------------  | --- |
-| :sparkles: Nome        | **Titulo do meu projeto**
-| :label: Tecnologias | C# (tecnologias utilizadas)
-| :rocket: URL         | https://url-deploy.com.br
-| :fire: Desafio     | https://url-do-desafio.com.br
+| :sparkles: Nome        | SysGestão - Gestão Comercial
+| :label: Tecnologias | C#
+| :rocket: URL         | ----
+| :fire: Desafio     | ----
 
 <!-- Inserir imagem com a #vitrinedev ao final do link -->
-![](https://via.placeholder.com/1200x500.png?text=imagem+lindona+do+meu+projeto#vitrinedev)
+![](https://cdn.discordapp.com/attachments/432013031606583306/1075589442615656530/image.png)
+![](https://cdn.discordapp.com/attachments/432013031606583306/1075589825631105034/image.png)
+![](https://cdn.discordapp.com/attachments/432013031606583306/1075589442615656530/image.png)
 
 ## Detalhes do projeto
 
-Textos e imagens que descrevam seu projeto, suas conquistas, seus desafios, próximos passos, etc...
+Projeto de gestão comercial totalmente em C# Console (em desenvolvimento)
