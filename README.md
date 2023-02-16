@@ -16,4 +16,4 @@ Sistema de gerenciamento comercial
 
 ## Detalhes do projeto
 
-Projeto de gestão comercial totalmente em C# Console (em desenvolvimento)
+Projeto de gestão comercial totalmente em C# em Console (em desenvolvimento)
