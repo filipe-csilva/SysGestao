@@ -1,70 +1,75 @@
-﻿using SysGestao.Menus.Clientes;
+﻿using SysGestao.SystemScreens.ClientScreens;
+using SysGestao.SystemScreens.PrimaryScreens;
 
-namespace SysGestao
+namespace SysGestao.SystemScreens.Clientes
 {
-    public static class MenuPrincipal
+    public static class PrimaryClientScreen
     {
-        public static void Show()
+        public static void Load()
         {
             Console.Clear();
-            Layout.Show();
+            Layout.Load();
 
-            WhiteOptions();
+            WhiteOptionscl1();
 
-            int option = int.Parse(Console.ReadLine());
+            short option = short.Parse(Console.ReadLine());
 
             switch (option)
             {
-                case 0:
-                    Console.Clear();
-                    Environment.Exit(0);
-                    break;
                 case 1:
-                    MenuClientes.Show();
+                    CadClientes.Load();
                     break;
                 case 2:
-                    MenuFornecedor.Show();
+                    Load();
                     break;
                 case 3:
-                    MenuProdutos.Show();
+                    Load();
                     break;
                 case 4:
-                    MenuUsuarios.Show();
-                    break;                
-                default: MenuPrincipal.Show();
+                    ListaClientes.Load();
+                    break;
+                case 0:
+                    PrimaryMainScreen.Load();
+                    break;
+                default:
+                    Load();
                     break;
             }
         }
-        
-        public static void WhiteOptions()
+
+        public static void WhiteOptionscl1()
         {
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.SetCursorPosition(5, 4);
+            Console.Write("Menu Clientes");
+            Console.ForegroundColor = ConsoleColor.White;
             Console.SetCursorPosition(5, 6);
             Console.Write("Selecione uma das opções abaixo:");
             Console.SetCursorPosition(5, 8);
             Console.ForegroundColor = ConsoleColor.Green;
             Console.Write("1");
             Console.ForegroundColor = ConsoleColor.White;
-            Console.Write(" - Clientes");
+            Console.Write(" - Cadastrar");
             Console.SetCursorPosition(5, 9);
             Console.ForegroundColor = ConsoleColor.Green;
             Console.Write("2");
             Console.ForegroundColor = ConsoleColor.White;
-            Console.Write(" - Fornecedores");
+            Console.Write(" - Editar");
             Console.SetCursorPosition(5, 10);
             Console.ForegroundColor = ConsoleColor.Green;
             Console.Write("3");
             Console.ForegroundColor = ConsoleColor.White;
-            Console.Write(" - Produtos");
+            Console.Write(" - Deletar");
             Console.SetCursorPosition(5, 11);
             Console.ForegroundColor = ConsoleColor.Green;
             Console.Write("4");
             Console.ForegroundColor = ConsoleColor.White;
-            Console.Write(" - Úsuarios");
+            Console.Write(" - Consultar");
             Console.SetCursorPosition(5, 13);
             Console.ForegroundColor = ConsoleColor.Green;
             Console.Write("0");
             Console.ForegroundColor = ConsoleColor.White;
-            Console.Write(" - Sair");
+            Console.Write(" - Retornar");
             Console.SetCursorPosition(5, 16);
             Console.Write("Opção: ");
             Console.ForegroundColor = ConsoleColor.Red;

@@ -1,15 +1,16 @@
 ﻿using Caelum.Stella.CSharp.Format;
 using SysGestao.Menus;
+using SysGestao.SystemScreens.PrimaryScreens;
 using System.Text;
 
-namespace SysGestao
+namespace SysGestao.SystemScreens.ClientScreens
 {
     public static class CadClientes
     {
-        public static void Show()
+        public static void Load()
         {
             Console.Clear();
-            Layout.Show();
+            Layout.Load();
 
             Console.ForegroundColor = ConsoleColor.Red;
             Console.SetCursorPosition(39, 3);
@@ -19,7 +20,7 @@ namespace SysGestao
 
             var endArquivo = "usuarios.csv";
 
-            using(var fluxodearquivo = new FileStream(endArquivo, FileMode.Create))
+            using (var fluxodearquivo = new FileStream(endArquivo, FileMode.Create))
             {
                 var crienteDados = "1,FILIPE PAULO,51034276050,083986332350";
 
@@ -48,7 +49,7 @@ namespace SysGestao
             using (var fluxoDeArquivo = new FileStream(endArquivo, FileMode.Create))
             using (var escritor = new StreamWriter(fluxoDeArquivo))
             {
-                for (int i = 1;i <= 1000000; i++)
+                for (int i = 1; i <= 1000000; i++)
                 {
                     escritor.WriteLine($"Linha {i}");
                     escritor.Flush();

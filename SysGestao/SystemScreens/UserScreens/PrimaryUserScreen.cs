@@ -1,50 +1,46 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using SysGestao.SystemScreens.PrimaryScreens;
 
-namespace SysGestao.Menus.Clientes
+namespace SysGestao.SystemScreens.Usuarios
 {
-    public static class MenuFornecedor
+    public static class PrimaryUserScreen
     {
-        public static void Show()
+        public static void Load()
         {
             Console.Clear();
-            Layout.Show();
+            Layout.Load();
 
-            WhiteOptionsfn1();
+            WhiteOptions();
 
             short option = short.Parse(Console.ReadLine());
 
             switch (option)
             {
                 case 1:
-                    MenuFornecedor.Show();
+                    Load();
                     break;
                 case 2:
-                    MenuFornecedor.Show();
+                    Load();
                     break;
                 case 3:
-                    MenuFornecedor.Show();
+                    Load();
                     break;
                 case 4:
-                    MenuFornecedor.Show();
+                    Load();
                     break;
                 case 0:
-                    MenuPrincipal.Show();
+                    PrimaryMainScreen.Load();
                     break;
                 default:
-                    MenuFornecedor.Show();
+                    Load();
                     break;
             }
         }
 
-        public static void WhiteOptionsfn1()
+        public static void WhiteOptions()
         {
             Console.ForegroundColor = ConsoleColor.Red;
             Console.SetCursorPosition(5, 4);
-            Console.Write("Menu Fornecedor");
+            Console.Write("Menu Úsuarios");
             Console.ForegroundColor = ConsoleColor.White;
             Console.SetCursorPosition(5, 6);
             Console.Write("Selecione uma das opções abaixo:");

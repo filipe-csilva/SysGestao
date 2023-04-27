@@ -3,48 +3,49 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using SysGestao.SystemScreens.PrimaryScreens;
 
-namespace SysGestao.Menus.Clientes
+namespace SysGestao.SystemScreens.Fornecedores
 {
-    public static class MenuProdutos
+    public static class PrimarySupplierScreen
     {
-        public static void Show()
+        public static void Load()
         {
             Console.Clear();
-            Layout.Show();
+            Layout.Load();
 
-            WhiteOptionspr1();
+            WhiteOptionsfn1();
 
             short option = short.Parse(Console.ReadLine());
 
             switch (option)
             {
                 case 1:
-                    MenuProdutos.Show();
+                    Load();
                     break;
                 case 2:
-                    MenuProdutos.Show();
+                    Load();
                     break;
                 case 3:
-                    MenuProdutos.Show();
+                    Load();
                     break;
                 case 4:
-                    MenuProdutos.Show();
+                    Load();
                     break;
                 case 0:
-                    MenuPrincipal.Show();
+                    PrimaryMainScreen.Load();
                     break;
                 default:
-                    MenuProdutos.Show();
+                    Load();
                     break;
             }
         }
 
-        public static void WhiteOptionspr1()
+        public static void WhiteOptionsfn1()
         {
             Console.ForegroundColor = ConsoleColor.Red;
             Console.SetCursorPosition(5, 4);
-            Console.Write("Menu Produtos");
+            Console.Write("Menu Fornecedor");
             Console.ForegroundColor = ConsoleColor.White;
             Console.SetCursorPosition(5, 6);
             Console.Write("Selecione uma das opções abaixo:");

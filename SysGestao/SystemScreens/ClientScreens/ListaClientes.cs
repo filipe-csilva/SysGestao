@@ -1,14 +1,15 @@
 ﻿using Caelum.Stella.CSharp.Format;
-using SysGestao.Menus;
+using SysGestao.Models;
+using SysGestao.SystemScreens.PrimaryScreens;
 
-namespace SysGestao
+namespace SysGestao.SystemScreens.ClientScreens
 {
     public static class ListaClientes
     {
-        public static void Show()
+        public static void Load()
         {
             Console.Clear();
-            Layout.Show();
+            Layout.Load();
 
             Console.ForegroundColor = ConsoleColor.Red;
             Console.SetCursorPosition(42, 3);
@@ -36,6 +37,8 @@ namespace SysGestao
             Console.Write("OBSERVAÇÕES");
             Console.SetCursorPosition(0, 6);
             Layout.LinhaMenu();
+
+            //var clientes = GetDadosClientes();
 
             var endArquivo = "clientes.txt";
 
@@ -108,7 +111,7 @@ namespace SysGestao
             var idParse = int.Parse(id);
 
             var resultado = new DadosClientes(idParse, nome, cpf, telefone);
-            return  resultado;
+            return resultado;
         }
 
         //Opção inicial
@@ -127,5 +130,15 @@ namespace SysGestao
         //    var texto = utf8.GetString(buffer, 0, bytesLidos);
         //    Console.Write(texto);
         //}
+
+        //conexao com o banco de dados
+        //private static IEnumerable<DadosClientes> GetDadosClientes()
+        //{
+        //    using(var connection = new SqlConnection(connectionString: "server = 'localhost'; database = 'db_sysgestao'; user = 'root'; password = ''"))
+        //    {
+        //        return connection.Query<DadosClientes>(sql: "select * from tb_clientes");
+        //    }
+        //}
+
     }
 }

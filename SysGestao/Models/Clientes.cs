@@ -1,4 +1,4 @@
-﻿namespace SysGestao
+﻿namespace SysGestao.Models
 {
     public class DadosClientes
     {
