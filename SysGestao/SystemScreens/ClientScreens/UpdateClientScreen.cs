@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace SysGestao.SystemScreens.ClientScreens
 {
-    internal class UpdateClientScreen
+    public class UpdateClientScreen
     {
+        public static void Load()
+        {
+
+        }
     }
 }

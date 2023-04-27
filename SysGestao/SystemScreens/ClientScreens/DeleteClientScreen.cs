@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace SysGestao.SystemScreens.ClientScreens
 {
-    internal class DeleteClientScren
+    public class DeleteClientScreen
     {
+        public static void Load()
+        {
+
+        }
     }
 }

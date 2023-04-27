@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SysGestao.Repositories
 {
-    internal class Repository
+    public class Repository
     {
     }
 }

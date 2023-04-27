@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace SysGestao.SystemScreens.ClientScreens
 {
-    internal class WhiteClienteScreen
+    public class CreateClientScreen
     {
+        public static void Load()
+        {
+
+        }
     }
 }

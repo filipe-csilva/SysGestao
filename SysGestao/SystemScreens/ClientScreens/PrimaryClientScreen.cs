@@ -12,23 +12,24 @@ namespace SysGestao.SystemScreens.Clientes
 
             WhiteOptionscl1();
 
-            short option = short.Parse(Console.ReadLine());
+            var letra = Console.ReadKey().KeyChar;
+            int option = (int)char.ToUpper(letra) - 64;
 
             switch (option)
             {
-                case 1:
-                    CadClientes.Load();
+                case -15:
+                    CreateClientScreen.Load();
                     break;
-                case 2:
-                    Load();
+                case -14:
+                    UpdateClientScreen.Load();
                     break;
-                case 3:
-                    Load();
+                case -13:
+                    DeleteClientScreen.Load();
                     break;
-                case 4:
-                    ListaClientes.Load();
+                case -12:
+                    ListClientScreen.Load();
                     break;
-                case 0:
+                case -16:
                     PrimaryMainScreen.Load();
                     break;
                 default:

@@ -1,6 +1,4 @@
-﻿using Caelum.Stella.CSharp.Format;
-using SysGestao.Menus;
-using SysGestao.SystemScreens.PrimaryScreens;
+﻿using SysGestao.SystemScreens.PrimaryScreens;
 using System.Text;
 
 namespace SysGestao.SystemScreens.ClientScreens
