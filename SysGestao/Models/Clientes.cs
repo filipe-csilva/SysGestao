@@ -1,18 +1,25 @@
-﻿namespace SysGestao.Models
-{
-    public class DadosClientes
-    {
-        public int Id { get; }
-        public string Nome { get; set; }
-        public string CPF { get; }
-        public string Telefone { get; set; }
+﻿using Dapper.Contrib.Extensions;
 
-        public DadosClientes(int id, string nome, string cpf, string telefone)
-        {
-            Id = id;
-            Nome = nome;
-            CPF = cpf;
-            Telefone = telefone;
-        }
+namespace SysGestao.Models
+{
+
+    [Table("[Client]")]
+
+    public class Client
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public string CPF { get; set; }
+        public string Fone { get; set; }
+        public string Obs { get; set; }
+
+        //public Client(int id, string name, string cpf, string fone, string obs)
+        //{
+        //    Id = id;
+        //    Name = name;
+        //    CPF = cpf;
+        //    Fone = fone;
+        //    Obs = obs;
+        //}
     }
 }

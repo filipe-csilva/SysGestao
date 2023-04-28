@@ -1,9 +1,4 @@
 ﻿using SysGestao.SystemScreens.PrimaryScreens;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace SysGestao.SystemScreens.ClientScreens
 {
@@ -14,9 +9,14 @@ namespace SysGestao.SystemScreens.ClientScreens
             Console.Clear();
             Layout.Load();
 
+            WhiteOption();
+        }
+
+        public static void WhiteOption()
+        {
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.SetCursorPosition(53, 3);
-            Console.Write("LISTA DE CLIENTES\n\n");
+            Console.SetCursorPosition(51, 3);
+            Console.Write("CADASTRO DE CLIENTES\n\n");
             Console.ForegroundColor = ConsoleColor.White;
             Console.SetCursorPosition(0, 4);
             Layout.LinhaMenu();

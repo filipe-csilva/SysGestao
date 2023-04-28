@@ -80,7 +80,7 @@ namespace SysGestao.SystemScreens.ClientScreens
                     Console.SetCursorPosition(11, i);
                     Console.Write("|");
                     Console.SetCursorPosition(14, i);
-                    Console.Write($"{cliente.Nome}");
+                    Console.Write($"{cliente.Name}");
                     Console.SetCursorPosition(47, i);
                     Console.Write("|");
                     Console.SetCursorPosition(49, i);
@@ -88,7 +88,7 @@ namespace SysGestao.SystemScreens.ClientScreens
                     Console.SetCursorPosition(65, i);
                     Console.Write("|");
                     Console.SetCursorPosition(68, i);
-                    Console.Write($"{cliente.Telefone}");
+                    Console.Write($"{cliente.Fone}");
                     Console.SetCursorPosition(82, i);
                     Console.Write("|");
                     Console.SetCursorPosition(84, i);
@@ -100,17 +100,18 @@ namespace SysGestao.SystemScreens.ClientScreens
             }
         }
 
-        static DadosClientes ConverteStringPCliente(string linha)
+        static Client ConverteStringPCliente(string linha)
         {
             var campos = linha.Split(";");
             var id = campos[0];
             var nome = campos[1];
             var cpf = new CPFFormatter().Format(campos[2]);
             var telefone = campos[3];
+            var obs = campos[4];
 
             var idParse = int.Parse(id);
 
-            var resultado = new DadosClientes(idParse, nome, cpf, telefone);
+            var resultado = new Client();
             return resultado;
         }
 

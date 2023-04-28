@@ -71,9 +71,6 @@ namespace SysGestao.SystemScreens.Clientes
             Console.Write("0");
             Console.ForegroundColor = ConsoleColor.White;
             Console.Write(" - Retornar");
-            Console.SetCursorPosition(5, 16);
-            Console.Write("Opção: ");
-            Console.ForegroundColor = ConsoleColor.Red;
         }
     }
 }

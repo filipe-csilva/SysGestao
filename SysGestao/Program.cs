@@ -6,7 +6,7 @@ namespace SysGestao
     class Program
     {
 
-        const string connectionString = "Server=localhost; Database=Blog; User ID=sa; Password=leason20; TrustServerCertificate=True";
+        const string connectionString = "Server=localhost; Database=dbSysGestao; User ID=sa; Password=leason20; TrustServerCertificate=True";
 
         static void Main(string[] args)
         {
