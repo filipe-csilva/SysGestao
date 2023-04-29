@@ -1,7 +1,7 @@
 ﻿using Dapper.Contrib.Extensions;
 using Microsoft.Data.SqlClient;
 
-namespace SysGestao.Repositories
+namespace SysGestao.Repository
 {
     public class Repository<T> where T : class
     {

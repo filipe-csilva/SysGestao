@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SysGestao.SystemScreens.PrimaryScreens;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,11 @@ namespace SysGestao.SystemScreens.ClientScreens
     {
         public static void Load()
         {
-
+            Console.Clear();
+            Layout.Load();
+            //Title();
+            //WhiteOption();
+            Console.CursorVisible = true;
         }
     }
 }

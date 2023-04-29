@@ -1,7 +1,7 @@
 ﻿using SysGestao.SystemScreens.PrimaryScreens;
 using System.Text;
 
-namespace SysGestao.SystemScreens.ClientScreens
+namespace SysGestao.LIXO
 {
     public static class CadClientes
     {

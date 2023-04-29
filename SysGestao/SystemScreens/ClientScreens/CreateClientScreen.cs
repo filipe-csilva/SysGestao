@@ -1,6 +1,6 @@
 ﻿using Caelum.Stella.CSharp.Validation;
 using SysGestao.Models;
-using SysGestao.Repositories;
+using SysGestao.Repository;
 using SysGestao.SystemScreens.Clientes;
 using SysGestao.SystemScreens.PrimaryScreens;
 
@@ -79,9 +79,16 @@ namespace SysGestao.SystemScreens.ClientScreens
             catch (Exception ex)
             {
                 Console.Clear();
+                Layout.Load();
+                Title();
+                Console.SetCursorPosition(3, 6);
+                Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("Não foi possível salvar a tag");
-                Console.WriteLine();
+                Console.SetCursorPosition(3, 8);
+                Console.ForegroundColor = ConsoleColor.White;
                 Console.WriteLine($"Erro : {ex.Message}");
+                Console.SetCursorPosition(3, 10);
+                Console.Write("Precione qualquer tecla para continuar!");
                 Console.ReadKey();
                 PrimaryClientScreen.Load();
             }
@@ -91,7 +98,7 @@ namespace SysGestao.SystemScreens.ClientScreens
         {
             Console.ForegroundColor = ConsoleColor.Red;
             Console.SetCursorPosition(51, 3);
-            Console.Write("CADASTRO DE CLIENTES\n\n");
+            Console.Write("CADASTRO DE CLIENTES");
         }
     }
 }

@@ -2,7 +2,7 @@
 using SysGestao.Models;
 using SysGestao.SystemScreens.PrimaryScreens;
 
-namespace SysGestao.SystemScreens.ClientScreens
+namespace SysGestao.LIXO
 {
     public static class ListaClientes
     {
