@@ -61,6 +61,7 @@ namespace SysGestao.SystemScreens.ClientScreens
                         Console.SetCursorPosition(3, 12);
                         Console.ForegroundColor = ConsoleColor.White;
                         Console.WriteLine("Pressione [ENTER] para continuar...");
+                        Console.CursorVisible = false;
                         Console.ReadKey();
                         PrimaryClientScreen.Load();
                     }catch (Exception ex)
@@ -72,6 +73,7 @@ namespace SysGestao.SystemScreens.ClientScreens
                         Console.SetCursorPosition(3, 12);
                         Console.WriteLine(ex.Message);
                         Console.SetCursorPosition(3, 14);
+                        Console.CursorVisible = false;
                         Console.WriteLine("Pressione [ENTER] para continuar...");
                         Console.ReadKey();
                         PrimaryClientScreen.Load();
@@ -84,6 +86,7 @@ namespace SysGestao.SystemScreens.ClientScreens
                     Console.WriteLine($"Exclusão do cliente {item.Name} foi cancelada!");
                     Console.SetCursorPosition(3, 12);
                     Console.ForegroundColor= ConsoleColor.White;
+                    Console.CursorVisible = false;
                     Console.WriteLine("Pressione [ENTER] para continuar...");
                     Console.ReadKey();
                     PrimaryClientScreen.Load();
@@ -95,6 +98,7 @@ namespace SysGestao.SystemScreens.ClientScreens
                     Console.WriteLine("Você digitou uma opção inválida!");
                     Console.SetCursorPosition(3, 12);
                     Console.ForegroundColor = ConsoleColor.White;
+                    Console.CursorVisible = false;
                     Console.WriteLine("Para tentar novamente precione [ENTER]...");
                     Console.ReadKey();
                     Load();
@@ -107,8 +111,13 @@ namespace SysGestao.SystemScreens.ClientScreens
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.Write($"(ID) informado já foi excluido ou não existe!");
                 Console.ForegroundColor = ConsoleColor.White;
-                Console.SetCursorPosition(3, 9);
+                Console.SetCursorPosition(3, 10);
                 Console.WriteLine(ex.Message);
+                Console.SetCursorPosition(3, 12);
+                Console.WriteLine("Pressione [ENTER] para continuar...");
+                Console.ReadKey();
+                PrimaryClientScreen.Load();
+
             }
         }
     }

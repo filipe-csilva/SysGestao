@@ -1,4 +1,5 @@
 ﻿using SysGestao.SystemScreens.PrimaryScreens;
+using SysGestao.SystemScreens.ProductScreens;
 
 namespace SysGestao.SystemScreens.Produtos
 {
@@ -11,25 +12,25 @@ namespace SysGestao.SystemScreens.Produtos
 
             WhiteOptionspr1();
 
-            short option = short.Parse(Console.ReadLine());
+            var letra = Console.ReadKey().KeyChar;
+            int option = (int)char.ToUpper(letra) - 64;
 
             switch (option)
             {
-                case 1:
-                    Load();
+                case -15:
+                    CreateProductScreen.Load();
                     break;
-                case 2:
-                    Load();
+                case -14:
+                    UpdateProductScreen.Load();
                     break;
-                case 3:
-                    Load();
+                case -13:
+                    DeleteProductScreen.Load();
                     break;
-                case 4:
-                    Load();
+                case -12:
+                    ListProductScreen.Load();
                     break;
-                case 0:
+                case -16:
                     PrimaryMainScreen.Load();
-
                     break;
                 default:
                     Load();
@@ -70,9 +71,6 @@ namespace SysGestao.SystemScreens.Produtos
             Console.Write("0");
             Console.ForegroundColor = ConsoleColor.White;
             Console.Write(" - Retornar");
-            Console.SetCursorPosition(5, 16);
-            Console.Write("Opção: ");
-            Console.ForegroundColor = ConsoleColor.Red;
         }
     }
 }
