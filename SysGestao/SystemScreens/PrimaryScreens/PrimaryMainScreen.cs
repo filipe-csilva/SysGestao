@@ -16,7 +16,6 @@ namespace SysGestao.SystemScreens.PrimaryScreens
 
             var letra = Console.ReadKey().KeyChar;
             int option = (int)char.ToUpper(letra) - 64;
-            Console.WriteLine(option);
 
             switch (option)
             {

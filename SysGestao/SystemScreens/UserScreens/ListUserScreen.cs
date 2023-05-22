@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace SysGestao.SystemScreens.UserScreens
 {
-    internal class ListUserScreen
+    public static class ListUserScreen
     {
+        public static void Load()
+        {
+
+        }
     }
 }
