@@ -30,7 +30,7 @@ namespace SysGestao.SystemScreens.ProductScreens
 
             if (name != "")
             {
-                Create(new Products
+                Create(new Product
                 {
                     Name = name,
                     GTIN = gtin,
@@ -71,18 +71,18 @@ namespace SysGestao.SystemScreens.ProductScreens
             Console.Write("PRECO DE VENDA:");
         }
 
-        public static void Create(Products products)
+        public static void Create(Product product)
         {
             try
             {
-                var repository = new Repository<Products>(DataBase.Connection);
-                repository.Create(products);
+                var repository = new Repository<Product>(DataBase.Connection);
+                repository.Create(product);
                 Console.Clear();
                 Layout.Load();
                 Title();
                 Console.SetCursorPosition(3, 6);
                 Console.ForegroundColor = ConsoleColor.Green;
-                Console.Write($"Produto {products.Name} Cadastrado com sucesso!");
+                Console.Write($"Produto {product.Name} Cadastrado com sucesso!");
                 Console.SetCursorPosition(3, 8);
                 Console.ForegroundColor = ConsoleColor.White;
                 Console.Write("Precione qualquer tecla para continuar!");

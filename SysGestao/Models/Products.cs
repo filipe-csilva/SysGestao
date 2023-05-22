@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Dapper.Contrib.Extensions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,7 +7,8 @@ using System.Threading.Tasks;
 
 namespace SysGestao.Models
 {
-    public class Products
+    [Table("[Product]")]
+    public class Product
     {
         public int Id { get; set; }
         public string Name { get; set; }
