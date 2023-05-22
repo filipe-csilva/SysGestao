@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace SysGestao.SystemScreens.SupplierScreens
 {
-    internal class ListSplierScreen
+    public static class DeleteSupplierScreen
     {
+        public static void Load()
+        {
+
+        }
     }
 }

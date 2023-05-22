@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace SysGestao.SystemScreens.SupplierScreens
 {
-    internal class UpdateSupplierScreen
+    public static class UpdateSupplierScreen
     {
+        public static void Load()
+        {
+
+        }
     }
 }

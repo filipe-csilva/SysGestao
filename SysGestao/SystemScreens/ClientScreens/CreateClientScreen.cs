@@ -17,11 +17,11 @@ namespace SysGestao.SystemScreens.ClientScreens
             Console.CursorVisible = true;
 
            
-            Console.SetCursorPosition(20, 6);
+            Console.SetCursorPosition(26, 6);
             string name = Console.ReadLine();
-            Console.SetCursorPosition(20, 8);
+            Console.SetCursorPosition(26, 8);
             string cpf = Console.ReadLine();
-            Console.SetCursorPosition(20, 10);
+            Console.SetCursorPosition(26, 10);
             string fone = Console.ReadLine();
 
             if (new CPFValidator().IsValid(cpf))
@@ -69,7 +69,7 @@ namespace SysGestao.SystemScreens.ClientScreens
                 Title();
                 Console.SetCursorPosition(3, 6);
                 Console.ForegroundColor = ConsoleColor.Green;
-                Console.Write($"Criente {client.Name} Cadastrada com sucesso!");
+                Console.Write($"Criente {client.Name} Cadastrado com sucesso!");
                 Console.SetCursorPosition(3, 8);
                 Console.ForegroundColor = ConsoleColor.White;
                 Console.Write("Precione qualquer tecla para continuar!");

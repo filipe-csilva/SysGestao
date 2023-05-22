@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using SysGestao.SystemScreens.PrimaryScreens;
+using SysGestao.SystemScreens.SupplierScreens;
 
 namespace SysGestao.SystemScreens.Fornecedores
 {
@@ -16,27 +17,28 @@ namespace SysGestao.SystemScreens.Fornecedores
 
             WhiteOptionsfn1();
 
-            short option = short.Parse(Console.ReadLine());
+            var letra = Console.ReadKey().KeyChar;
+            int option = (int)char.ToUpper(letra) - 64;
 
             switch (option)
             {
-                case 1:
-                    Load();
+                case -15:
+                    CreateSupplierScreen.Load();
                     break;
-                case 2:
-                    Load();
+                case -14:
+                    UpdateSupplierScreen.Load();
                     break;
-                case 3:
-                    Load();
+                case -13:
+                    DeleteSupplierScreen.Load();
                     break;
-                case 4:
-                    Load();
+                case -12:
+                    ListSupplierScreen.Load();
                     break;
-                case 0:
+                case -16:
                     PrimaryMainScreen.Load();
                     break;
                 default:
-                    Load();
+                    PrimaryMainScreen.Load();
                     break;
             }
         }
@@ -45,7 +47,7 @@ namespace SysGestao.SystemScreens.Fornecedores
         {
             Console.ForegroundColor = ConsoleColor.Red;
             Console.SetCursorPosition(5, 4);
-            Console.Write("Menu Fornecedor");
+            Console.Write("Menu Fornecedores");
             Console.ForegroundColor = ConsoleColor.White;
             Console.SetCursorPosition(5, 6);
             Console.Write("Selecione uma das opções abaixo:");
@@ -74,9 +76,6 @@ namespace SysGestao.SystemScreens.Fornecedores
             Console.Write("0");
             Console.ForegroundColor = ConsoleColor.White;
             Console.Write(" - Retornar");
-            Console.SetCursorPosition(5, 16);
-            Console.Write("Opção: ");
-            Console.ForegroundColor = ConsoleColor.Red;
         }
     }
 }
