@@ -1,4 +1,5 @@
-﻿using SysGestao.SystemScreens.Clientes;
+﻿using SysGestao.Models;
+using SysGestao.SystemScreens.Clientes;
 using SysGestao.SystemScreens.Fornecedores;
 using SysGestao.SystemScreens.Produtos;
 using SysGestao.SystemScreens.Usuarios;
@@ -12,11 +13,15 @@ namespace SysGestao.SystemScreens.PrimaryScreens
             Console.Clear();
             Layout.Load();
 
+            var sessionAtual = new Session();
+            sessionAtual.Id = session.Id;
+
+            Console.WriteLine(sessionAtual.id);
+
             WhiteOptions();
 
             var letra = Console.ReadKey().KeyChar;
             int option = (int)char.ToUpper(letra) - 64;
-            Console.WriteLine(option);
 
             switch (option)
             {

@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SysGestao.SystemScreens.UserScreens
+namespace SysGestao.Models
 {
-    public static class ListUserScreen
+    public class Session : Pessoa
     {
-        public static void Load()
+        internal void Utilizar()
         {
-
+            throw new NotImplementedException();
         }
     }
 }

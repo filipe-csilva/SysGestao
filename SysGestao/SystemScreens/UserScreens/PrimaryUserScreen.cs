@@ -1,4 +1,5 @@
 ﻿using SysGestao.SystemScreens.PrimaryScreens;
+using SysGestao.SystemScreens.UserScreens;
 
 namespace SysGestao.SystemScreens.Usuarios
 {
@@ -11,23 +12,24 @@ namespace SysGestao.SystemScreens.Usuarios
 
             WhiteOptions();
 
-            short option = short.Parse(Console.ReadLine());
+            var letra = Console.ReadKey().KeyChar;
+            int option = (int)char.ToUpper(letra) - 64;
 
             switch (option)
             {
-                case 1:
-                    Load();
+                case -15:
+                    CreateUserScreen.Load();
                     break;
-                case 2:
-                    Load();
+                case -14:
+                    UpdateUserScreen.Load();
                     break;
-                case 3:
-                    Load();
+                case -13:
+                    DeleteUserScreen.Load();
                     break;
-                case 4:
-                    Load();
+                case -12:
+                    ListUserScreen.Load();
                     break;
-                case 0:
+                case -16:
                     PrimaryMainScreen.Load();
                     break;
                 default:
@@ -69,9 +71,6 @@ namespace SysGestao.SystemScreens.Usuarios
             Console.Write("0");
             Console.ForegroundColor = ConsoleColor.White;
             Console.Write(" - Retornar");
-            Console.SetCursorPosition(5, 16);
-            Console.Write("Opção: ");
-            Console.ForegroundColor = ConsoleColor.Red;
         }
     }
 }
