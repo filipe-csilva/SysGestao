@@ -28,7 +28,7 @@ namespace SysGestao.SystemScreens.ClientScreens
             {
                 Create(new Client
                 {
-                    Name = name,
+                    name = name,
                     CPF = cpf,
                     Fone = fone,
                     Obs = null
