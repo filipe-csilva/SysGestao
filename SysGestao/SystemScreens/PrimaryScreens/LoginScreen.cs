@@ -52,7 +52,7 @@ namespace SysGestao.SystemScreens.PrimaryScreens
 
             if (senha == item.Password)
             {
-                PrimaryMainScreen.Load(item.Id);
+                PrimaryMainScreen.Load();
             }
             else
             {
