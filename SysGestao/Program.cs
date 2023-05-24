@@ -13,10 +13,10 @@ namespace SysGestao
             DataBase.Connection = new SqlConnection(connectionString);
             DataBase.Connection.Open();
 
-            //PrimaryMainScreen.Load('0');
             LoginScreen.Load();
 
             DataBase.Connection.Close();
+
             Console.ReadKey();
         }
     }
