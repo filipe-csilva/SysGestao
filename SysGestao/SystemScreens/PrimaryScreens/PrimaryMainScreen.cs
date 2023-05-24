@@ -1,4 +1,5 @@
 ﻿using SysGestao.Models;
+using SysGestao.Repository;
 using SysGestao.SystemScreens.Clientes;
 using SysGestao.SystemScreens.Fornecedores;
 using SysGestao.SystemScreens.Produtos;
@@ -8,15 +9,18 @@ namespace SysGestao.SystemScreens.PrimaryScreens
 {
     public static class PrimaryMainScreen
     {
-        public static void Load()
+        public static void Load(int id)
         {
             Console.Clear();
+            var repository = new Repository<User>(DataBase.Connection);
+            var item = repository.Get(id);
+
+            if (item.Id == null || item.Id == 0)
+            {
+                LoginScreen.Load();
+            }
+
             Layout.Load();
-
-            var sessionAtual = new Session();
-            sessionAtual.Id = session.Id;
-
-            Console.WriteLine(sessionAtual.id);
 
             WhiteOptions();
 
@@ -42,7 +46,7 @@ namespace SysGestao.SystemScreens.PrimaryScreens
                     PrimaryUserScreen.Load();
                     break;
                 default:
-                    Load();
+                    Load(id);
                     break;
             }
         }
