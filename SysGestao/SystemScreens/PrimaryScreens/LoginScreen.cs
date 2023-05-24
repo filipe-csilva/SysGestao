@@ -52,11 +52,14 @@ namespace SysGestao.SystemScreens.PrimaryScreens
 
             if (senha == item.Password)
             {
+<<<<<<< HEAD
                 var session = new Session();
                 session.Id = item.Id;
                 session.Name = item.Name;
                 session.Utilizar();
 
+=======
+>>>>>>> dc5394c26c57299570dcb66e26fd77938dc3e878
                 PrimaryMainScreen.Load();
             }
             else
