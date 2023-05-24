@@ -8,14 +8,14 @@ namespace SysGestao.Models
 {
     public class Pessoa
     {
-        public Pessoa(int id, string name, string cpf, string fone, string obs)
-        {
-            Id = id;
-            Name = name;
-            CPF = cpf;
-            Fone = fone;
-            Obs = obs;
-        }
+        //public Pessoa(int id, string name, string cpf, string fone, string obs)
+        //{
+        //    Id = id;
+        //    Name = name;
+        //    CPF = cpf;
+        //    Fone = fone;
+        //    Obs = obs;
+        //}
 
         public int Id { get; set; }
         public string Name { get; set; }

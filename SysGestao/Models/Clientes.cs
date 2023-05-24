@@ -7,8 +7,8 @@ namespace SysGestao.Models
 
     public class Client : Pessoa
     {
-        public Client(int id, string name, string cpf, string fone, string obs) : base(id, name, cpf, fone, obs)
-        {
-        }
+        //public Client(int id, string name, string cpf, string fone, string obs) : base(id, name, cpf, fone, obs)
+        //{
+        //}
     }
 }

@@ -10,19 +10,19 @@ namespace SysGestao.Models
     [Table("[Supplier]")]
     public class Supplier
     {
-        public Supplier(int id, string name, string cNPJ, string end, string bairro, string cidade, string estado, string cep, string fone, string obs)
-        {
-            Id = id;
-            Name = name;
-            CNPJ = cNPJ;
-            End = end;
-            Bairro = bairro;
-            Cidade = cidade;
-            Estado = estado;
-            Cep = cep;
-            Fone = fone;
-            Obs = obs;
-        }
+        //public Supplier(int id, string name, string cNPJ, string end, string bairro, string cidade, string estado, string cep, string fone, string obs)
+        //{
+        //    Id = id;
+        //    Name = name;
+        //    CNPJ = cNPJ;
+        //    End = end;
+        //    Bairro = bairro;
+        //    Cidade = cidade;
+        //    Estado = estado;
+        //    Cep = cep;
+        //    Fone = fone;
+        //    Obs = obs;
+        //}
 
         public int Id { get; set; }
         public string Name { get; set; }

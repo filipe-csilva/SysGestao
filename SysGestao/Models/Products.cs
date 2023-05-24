@@ -10,17 +10,17 @@ namespace SysGestao.Models
     [Table("[Product]")]
     public class Product
     {
-        public Product(int id, string name, string gTIN, string gramatura, float pCompra, float pCusto, float pVenda, string obs)
-        {
-            Id = id;
-            Name = name;
-            GTIN = gTIN;
-            Gramatura = gramatura;
-            PCompra = pCompra;
-            PCusto = pCusto;
-            PVenda = pVenda;
-            Obs = obs;
-        }
+        //public Product(int id, string name, string gTIN, string gramatura, float pCompra, float pCusto, float pVenda, string obs)
+        //{
+        //    Id = id;
+        //    Name = name;
+        //    GTIN = gTIN;
+        //    Gramatura = gramatura;
+        //    PCompra = pCompra;
+        //    PCusto = pCusto;
+        //    PVenda = pVenda;
+        //    Obs = obs;
+        //}
 
         public int Id { get; set; }
         public string Name { get; set; }
