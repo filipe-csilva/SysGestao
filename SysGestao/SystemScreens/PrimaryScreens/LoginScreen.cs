@@ -21,7 +21,7 @@ namespace SysGestao.SystemScreens.PrimaryScreens
             Console.SetCursorPosition(30, 6);
             int id = int.Parse(Console.ReadLine());
             Console.SetCursorPosition(30, 8);
-            var password = new StringBuilder();
+            var password = new StringBuilder(); //SecuriteBilder
 
             while (true)
             {

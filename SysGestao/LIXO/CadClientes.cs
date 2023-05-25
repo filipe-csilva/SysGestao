@@ -18,16 +18,14 @@ namespace SysGestao.LIXO
 
             var endArquivo = "usuarios.csv";
 
-            using (var fluxodearquivo = new FileStream(endArquivo, FileMode.Create))
-            {
-                var crienteDados = "1,FILIPE PAULO,51034276050,083986332350";
+            using var fluxodearquivo = new FileStream(endArquivo, FileMode.Create);
+            var crienteDados = "1,FILIPE PAULO,51034276050,083986332350";
 
-                var encoding = Encoding.UTF8;
+            var encoding = Encoding.UTF8;
 
-                var bytes = encoding.GetBytes(crienteDados);
+            var bytes = encoding.GetBytes(crienteDados);
 
-                fluxodearquivo.Write(bytes, 0, bytes.Length);
-            }
+            fluxodearquivo.Write(bytes, 0, bytes.Length);
         }
         public static void CriarArquivo()
         {
